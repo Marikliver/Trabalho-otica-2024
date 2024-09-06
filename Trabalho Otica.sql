@@ -1,4 +1,4 @@
-/* Lógico_6: */
+
 
 CREATE TABLE Produto (
     Id_produto NUMERIC PRIMARY KEY,
@@ -21,24 +21,8 @@ CREATE TABLE Marca (
     CONSTRAINT FK_Marca_1 FOREIGN KEY (fk_Produto_Id_produto)
         REFERENCES Produto (Id_produto)
         ON DELETE CASCADE
-);
 
-CREATE TABLE Cliente (
-    Id_Cliente NUMERIC PRIMARY KEY,
-    Nome_Cliente VARCHAR,
-    CPF NUMERIC,
-    Telefone NUMERIC,
-    Email VARCHAR
 );
-
-INSERT INTO Cliente (Id_Cliente, Nome_Cliente, CPF, Telefone, Email) VALUES
-(1, 'Ana Silva', 12345678901, 21987654321, 'ana.silva@example.com'),
-(2, 'Bruno Souza', 23456789012, 21987654322, 'bruno.souza@example.com'),
-(3, 'Carla Pereira', 34567890123, 21987654323, 'carla.pereira@example.com'),
-(4, 'Daniel Oliveira', 45678901234, 21987654324, 'daniel.oliveira@example.com'),
-(5, 'Eduarda Lima', 56789012345, 21987654325, 'eduarda.lima@example.com'),
-(6, 'Felipe Costa', 67890123456, 21987654326, 'felipe.costa@example.com'),
-(7, 'Gabriela Santos', 78901234567, 21987654327, 'gabriela.santos@example.com');
 
 INSERT INTO Produto (Id_produto, Nome_Produto, Quantidade) VALUES
 (1, 'Óculos de Sol', 50),
@@ -69,11 +53,3 @@ INSERT INTO Marca (Id_Marca, Nome_Mar) VALUES
 (4, 'Ana Hickmann'),
 (5, 'Levis'),
 (6, 'Tng');
-
-Select * from Produto
-
-Select * from Gaveta
-
-Select * from Marca
-
-Select * from Cliente
